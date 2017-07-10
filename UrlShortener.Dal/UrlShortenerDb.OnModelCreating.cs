@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UrlShortener.Domain;
 
 namespace UrlShortener.Dal
 {
@@ -7,8 +6,9 @@ namespace UrlShortener.Dal
     {
         protected override void OnModelCreating(ModelBuilder mb)
         {
-            mb.Entity<ShortLink>()
-                .HasKey(sl => sl.SourceUrl);
+            //mb.Entity<ShortLink>()
+            //    .Property(x => x.SourceUrl)
+            //    .HasAnnotation("CaseSensitive", true);
         }
     }
 }

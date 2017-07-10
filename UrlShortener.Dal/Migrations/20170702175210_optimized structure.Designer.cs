@@ -8,9 +8,10 @@ using UrlShortener.Dal;
 namespace UrlShortener.Dal.Migrations
 {
     [DbContext(typeof(UrlShortenerDb))]
-    partial class UrlShortenerDbModelSnapshot : ModelSnapshot
+    [Migration("20170702175210_optimized structure")]
+    partial class optimizedstructure
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
